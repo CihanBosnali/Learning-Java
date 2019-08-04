@@ -7,3 +7,5 @@ Hey everyone! I started to learn a new programming language: Java. I'm sharing t
 2 - [Rock,Paper,Scissors game on console](https://github.com/CihanBosnali/Learning-Java/blob/master/rockpaperscissors.java)
 
 3 - [Guessing Number game on console](https://github.com/CihanBosnali/Learning-Java/blob/master/guessnumber.java)
+
+4 - [Battleship game on console](https://github.com/CihanBosnali/Learning-Java/blob/master/battleshipgame.java)
