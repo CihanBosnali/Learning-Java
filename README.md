@@ -11,3 +11,5 @@ Hey everyone! I started to learn a new programming language: Java. I'm sharing t
 4 - [Battleship game on console](https://github.com/CihanBosnali/Learning-Java/blob/master/battleshipgame.java)
 
 5 - [Rock,Paper,Scissors game with GUI](https://github.com/CihanBosnali/Learning-Java/blob/master/rockpaperscissorsui.java)
+
+6 - [BMI Calculator with GUI](https://github.com/CihanBosnali/Learning-Java/blob/master/bmigui.java)
