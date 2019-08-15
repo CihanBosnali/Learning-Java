@@ -3,18 +3,25 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 import javax.swing.*;
 
-public class rockpaperui {
+/**
+ * if using a class inheriting from {@link JFrame}, event listening will be easier:
+ *  - store your buttons as private instance variables,
+ *  - implement {@link ActionListener} and override the actionPerformed method.
+ *  - compare the source from the {@link ActionEvent} and your buttons
+ *  - act according to which button was pressed.
+ */
 
-    public static String game(Integer user, String[] answers){
-        Integer computer =  new Random().nextInt(3);
+public class RockPaperUI { 
+    public static String game(int user, String[] answers){
+        int computer =  new Random().nextInt(3);
 
-        String str2return = "";
-        if (user.equals(computer)){
-            str2return += ("You both chose " + answers[user]);
+        String str2return; // suggestion: use = instead of += for readability
+        if (user == computer) {
+            str2return = ("You both chose " + answers[user]);
         } else if ((user + 1) % 3 == computer) {
-            str2return += ("Computer chose " + answers[computer] + ". Computer Wins");
+            str2return = ("Computer chose " + answers[computer] + ". Computer Wins");
         } else {
-            str2return += ("Computer chose " + answers[computer] + ". You Win");
+            str2return = ("Computer chose " + answers[computer] + ". You Win");
         }
 
         return str2return;
@@ -22,7 +29,7 @@ public class rockpaperui {
 
     public static void main(String[] args){
         String[] answers = {"ROCK", "PAPER", "SCISSORS"};
-        JFrame j = new JFrame();
+        JFrame j = new JFrame(); // name this "frame", maybe.
 
         JLabel label = new JLabel("CHOOSE");
         label.setBounds(30, 100, 500, 40);
@@ -64,8 +71,7 @@ public class rockpaperui {
         j.add(scissors);
 
         j.setSize(600, 400);
-        j.setLayout(null);
+        j.setLayout(null); // use a layout manager
         j.setVisible(true);
     }
-
 }

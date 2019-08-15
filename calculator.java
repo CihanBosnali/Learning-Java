@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator { // filename, PascalCase, etc.
 
     public static void main(String[] args) {
         while (true){
@@ -9,10 +9,10 @@ public class calculator {
             Scanner scan = new Scanner(System.in);
             String equation = scan.nextLine();
             String[] parts = equation.split(" ");
-            Double first = Double.parseDouble(parts[0]);
-            Double second = Double.parseDouble(parts[2]);
+            double first = Double.parseDouble(parts[0]);
+            double second = Double.parseDouble(parts[2]);
 
-            Double end = 0.0;
+            double end = 0.0;
 
             if (parts[1].equals("+")){
                 end = first + second;
@@ -28,6 +28,7 @@ public class calculator {
             }
 
             System.out.println(end);
+            scan.close();
         }
     }
 }
