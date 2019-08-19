@@ -1,12 +1,17 @@
+/*
+ * You may want to look into inheriting from the JFrame class to have a GUI class.
+ */
+
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class bmigui {
+public class BmiGui { // casing is weird because of the double abbrv. but still use PascalCase.
 
-    public static String calculateBMI(Double mass, Double height) {
-        Double BMI = mass / (height * height);
+    public static String calculateBMI(double mass, double height) {
+        double BMI = mass / (height * height);
 
         long BMIrounded = Math.round(BMI);
 
@@ -25,7 +30,7 @@ public class bmigui {
     }
 
     public static void main(String[] args){
-        JFrame j = new JFrame();
+        JFrame j = new JFrame(); // you might want to use a more descriptive var. name like "frame"
 
         JLabel startLabel = new JLabel("Calculate Your BMI");
         startLabel.setBounds(50, 50, 300, 40);
@@ -55,8 +60,8 @@ public class bmigui {
                 String height_str = heightField.getText();
                 String mass_str = massField.getText();
 
-                Double height = Double.parseDouble(height_str);
-                Double mass = Double.parseDouble(mass_str);
+                double height = Double.parseDouble(height_str);
+                double mass = Double.parseDouble(mass_str);
 
                 String returnStr = calculateBMI(mass, height);
 
@@ -67,6 +72,9 @@ public class bmigui {
         j.add(calc);
 
         j.setSize(400,400);
+
+        // try to use a layout manager instead of hardcoding locations for the elements.
+        // this makes it possible to resize the window and keep sensible layout and positioning
         j.setLayout(null);
         j.setVisible(true);
     }
